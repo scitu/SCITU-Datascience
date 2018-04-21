@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DataScience TU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static "uikit-3.0.0-beta.40/css/uikit.min.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "uikit-3.0.0-beta.40/css/hamburger.css" %}"/>
+    <script src="{% static "uikit-3.0.0-beta.40/js/uikit.min.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pridi" rel="stylesheet">
+    <style>
+      p,a{
+        font-family: 'Pridi', serif;
+      }
+      h1,h2,h3,h4{
+        font-family: 'Pridi', serif;
+      }
+
+      .fixed-bg {
+        background-image: url("{% static "banner.jpg" %} ");
+        min-height: 300px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    </style>
+</head>
+<body style="background-color:#cfdba4;">
+    <div class="uk-position-relative">
+        <nav class="uk-navbar-container" uk-navbar="dropbar: true" style="background-color:#bb0404;position:fixed;z-index:1;width:100%">
+            <div class="uk-navbar-left">
+                <a href="#home" uk-scroll>
+                    <img src= "{% static "a.png"  %}" style="width:270px; margin: 10px;" />
+                </a>
+            </div>
+            <div class="uk-navbar-right" >
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#courseDetail" uk-scroll style="font-size:18px;">เกี่ยวกับหลักสูตร</a>
+                    </li>
+                    <li>
+                        <a href="#work" uk-scroll style="font-size:18px;">การประกอบอาชีพ</a>
+                    </li>
+                    <li>
+                        <a href="#register" uk-scroll style="font-size:18px;">การลงทะเบียนศึกษา</a>
+                    </li>
+                    <li>
+                        <a href="#contact" uk-scroll style="font-size:18px;">ติดต่อเรา</a>
+                    </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <div class="uk-offcanvas-content">
+                    <!-- The whole page content goes here -->
+                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#offcanvas-usage" uk-toggle></a>
+                    <div id="offcanvas-usage" uk-offcanvas="flip: true">
+                      <div class="uk-offcanvas-bar">
+                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+                        <h3>Menu</h3>
+                        <ul>
+                            <a href="courseDetail.html"><h4>เกี่ยวกับหลักสูตร</h4></a>
+                        </ul>
+                        <ul>
+                            <a href="work.html"><h4>การประกอบอาชีพ</h4></a>
+                        </ul>
+                        <ul>
+                            <a href="register.html"><h4>การลงทะเบียนศึกษา</h4></a>
+                        </ul>
+                        <ul>
+                            <a href="contact.html"><h4>ติดต่อเรา</h4></a>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </nav>
+    </div>
+
+    <div id="home" class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push">
+        <ul class="uk-slideshow-items">
+            <li>
+                <iframe src="https://www.youtube.com/embed/ltoO6WbFQWA" frameborder="0" allowfullscreen uk-cover></iframe>
+                <div class="uk-position-center uk-position-medium uk-text-center uk-light">
+                    <h1 class="uk-margin-remove">Welcome </h2>
+                    <h2 class="uk-margin-remove">to Data Science</h2>
+                    <h2>ประโยคสวยๆหรูๆสักอัน</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="courseDetail" class="uk-margin uk-card uk-card-default uk-card-body">
+      <div class="uk-container">
+        <div style="text-align:center">
+          <h2>ที่มาของหลักสูตร</h2>
+        </div>
+
+        <hr class="uk-divider-icon">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผลจากการพัฒนาด้านดิจิทัล ทำให้ทุกภาคส่วนไม่ว่าจะเป็นรัฐบาลหรือภาคธุรกิจ ได้รับประโยชน์จากการเข้าถึงข้อมูลและการสร้างศักยภาพในการแข่งขัน เมื่อองค์กรสามารถเข้าถึงประโยชน์จากเทคโนโลยีดิจิทัลจะสามารถสร้างความแตกต่างและความสามารถในการแข่งขันในระยะยาวให้กับองค์กร<br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปัจจุบันหลายองค์กรภายในประเทศยังขาดบุคลากรที่มีความรู้ความเข้าใจในด้านการจัดการและวิเคราะห์ข้อมูลที่เรียกว่า นักวิทยาศาสตร์ข้อมูล (Data Scientist) ซึ่งเป็นผู้มีความสามารถในการนำข้อมูลมาใช้ให้เกิดประโยชน์ในการสร้างความได้เปรียบและเพื่อสร้างความสามารถในการแข่งขัน นักวิทยาศาสตร์ข้อมูลสามารถเขียนโปรแกรมจัดการข้อมูล และมีความรู้ทางด้านฮาร์ดแวร์และซอฟท์แวร์ที่จำเป็นในการจัดการข้อมูลขนาดใหญ่ รวมทั้งประยุกต์ความรู้ด้านสถิติ และการพัฒนาอัลกอริทึมขั้นสูง เพื่อสร้างรายงานสรุปเหตุการณ์ ค้นหาสาเหตุของปัญหา การสร้างแบบจำลองเพื่อทำนายเหตุการณ์ รวมทั้งเสนอแผนการจัดการที่ใช้ข้อมูลขนาดใหญ่เป็นรากฐานขับเคลื่อนการตัดสินใจ <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นักวิทยาศาสตร์ข้อมูลจำเป็นต้องมีความสามารถหลายด้านทั้ง คอมพิวเตอร์ คณิตศาสตร์และสถิติ รวมถึงทักษะประสบการณ์ในการเข้าใจระบบงานของหน่วยงานที่จะใช้ข้อมูล มหาวิทยาลัยธรรมศาสตร์ จึงตระหนักถึงความสำคัญและความจำเป็นที่ต้องจัดเตรียมนักวิทยาศาสตร์ข้อมูล เพื่อตอบรับความต้องการจากภาครัฐและเอกชน และขับเคลื่อนให้เศรษฐกิจไทยมีประสิทธิภาพทั้งในปัจจุบันและอนาคต และมีแนวคิดที่ไม่จำกัดเพียงพัฒนานักเรียนที่เพิ่งจบมัธยมศึกษาเท่านั้น แต่จะเปิดโอกาสให้ประชาชนผู้ที่สนใจสามารถที่จะเลือกเรียน ผ่านการเรียนแบบ Module-based ที่มีความสมบูรณ์ในตัว โดยใช้เวลาการเรียนโดยเร็วที่สุดเพียง Module ละประมาณ 4 เดือน โดยไม่ต้องรอการศึกษาระดับปริญญาตรีถึง 4 ปี ก็สามารถที่จะมีทักษะที่เพียงพอในการแก้ปัญหาเฉพาะด้านที่เกี่ยวข้องกับวิทยาศาสตร์ข้อมูล โดยสามารถเรียนผ่านช่องทางออนไลน์หรือ MOOC ซึ่งเป็นช่องทางที่ช่วยให้ผู้เรียนสามารถเรียนได้ทุกที่ ทุกเวลาที่เหมาะสมกับสภาพแวดล้อมหรือข้อจำกัดอื่น ๆ ของผู้เรียนเอง
+        </p>
+      </div>
+    </div>
+    <div class="fixed-bg"></div>
+    <!--<div class="fixed-bg"></div>-->
+    <div class="uk-section uk-section-secondary uk-light">
+        <div class="uk-container">
+            <h3>หลักสูตรนี้ใช้เวลาศึกษาทั้งหมด 4 ปี</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เนื้อหาหลักสูตรจะเป็นการเรียนการสอนแบบโมดูล (Modular System) ที่มีการจัดแบ่งกลุ่มวิชาออกเป็นโมดูล โดยผู้เรียนสามารถเลือกเรียนในโมดูลที่ตนเองสนใจ ซึ่งในหลักสูตรนี้แบ่งเนื้อหาวิชาออกเป็น 10 โมดูล ประกอบด้วยความรู้และทักษะที่จำเป็นในการสร้างนักวิทยาศาสตร์ข้อมูล ที่มีทักษะทางด้านการวิเคราะห์และบริหารข้อมูล ซึ่งเป็นบุคลากรที่ตลาดมีความต้องการสูงและจำเป็นต่อการพัฒนาอุตสาหกรรมดิจิทัลของประเทศ โดยทั้ง 10 Module ประกอบไปด้วย</p>
+            <hr class="uk-divider-icon">
+            <table class="uk-table uk-table-divider">
+                <thead>
+                    <tr>
+                        <th>ชื่อโมดูล</th>
+                        <th>กลุ่มวิชา</th>
+                        <th>คำอธิบาย</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Computing</td>
+                        <td>วิชาพื้นฐาน</td>
+                        <td>การสอนพื้นฐานด้านคอมพิวเตอร์ <br>ไม่ว่าจะเป็นการเขียนโปรแกรม การจัดการข้อมูล <br>และทักษะอื่น ๆ ที่จำเป็นในการเป็นนักวิทยาศาสตร์ข้อมูล</td>
+                    </tr>
+                    <tr>
+                        <td>2. Statistics</td>
+                        <td>วิชาพื้นฐาน</td>
+                        <td>สอนทักษะด้านสถิติ ความน่าจะเป็น <br>ความไม่แน่นอนและการตัดสินใจภายใต้ความไม่แน่นอน</td>
+                    </tr>
+                    <tr>
+                        <td>3. Business and Innovation</td>
+                        <td>วิชาพื้นฐาน</td>
+                        <td>ความรู้ความเข้าใจในหลักการทางธุรกิจแก่ผู้เรียน <br>เพื่อให้ผู้เรียนสามารถนำข้อมูลมาวิเคราะห์และตอบคำถามที่สำคัญทางธุรกิจได้</td>
+                    </tr>
+                    <tr>
+                        <td>4. Business Analytics</td>
+                        <td>วิชาบังคับในสาขา</td>
+                        <td>กระบวนการในการวิเคราะห์ข้อมูลตั้งแต่การทำความเข้าใจในข้อมูล<br> การเตรียมข้อมูลเพื่อการวิเคราะห์ การวิเคราะห์ และการนำเสนอผลการวิเคราะห์ผ่านเครื่องมือต่างๆ</td>
+                    </tr>
+                    <tr>
+                        <td>5. Data Governance</td>
+                        <td>วิชาบังคับในสาขา</td>
+                        <td>ทักษะในเรื่องของวิธีการจัดเก็บข้อมูล การดูแลรักษา การแบ่งปันข้อมูล <br>และการไหลของข้อมูลตลอดช่วง Life Cycle ของข้อมูล</td>
+                    </tr>
+                    <tr>
+                        <td>6. Actuarial Analytics</td>
+                        <td>วิชาเลือกในสาขา</td>
+                        <td>การใช้ข้อมูลเพื่อวิเคราะห์และบริหารความเสี่ยงในรูปแบบต่าง ๆ <br>อันจะเป็นประโยชน์ต่ออุตสาหกรรมประกันภัย</td>
+                    </tr>
+                    <tr>
+                        <td>7. Artificial Intelligence</td>
+                        <td>วิชาเลือกในสาขา</td>
+                        <td>ความรู้ความเข้าใจทางด้านปัญญาประดิษฐ์เพื่อนำเอามาประยุกต์ใช้ใน<br>การแก้ปัญหาและเพิ่มประสิทธิภาพการทำงานทางด้านการวิเคราะห์ข้อมูล การจัดการ<br> และการสร้างโมเดลสำหรับช่วยในการตัดสินใจ</td>
+                    </tr>
+                    <tr>
+                        <td>8. Digital Forensic</td>
+                        <td>วิชาเลือกในสาขา</td>
+                        <td>การใช้ข้อมูลเพื่อการสืบสวนสอบสวน การวิเคราะห์หาสาเหตุของเหตุการณ์ <br>และหารูปแบบของการกระทำความผิดบนโลกดิจิทัล้</td>
+                    </tr>
+                    <tr>
+                        <td>9. Digital Transformation</td>
+                        <td>วิชาเลือกในสาขา</td>
+                        <td>การสร้างทักษะในการบริหารองค์กรในยุคดิจิทัล การส่งเสริมการใช้ข้อมูลให้ทั่วถึงทั้งองค์กร ให้เกิดเป็นวัฒนธรรม</td>
+                    </tr>
+                    <tr>
+                        <td>10. Health Informatics</td>
+                        <td>วิชาเลือกในสาขา</td>
+                        <td>การสร้างทักษะให้กับผู้เรียนเข้าใจถึงวิธีการในการนำข้อมูลด้านสุขภาพมาใช้เพื่อวิเคราะห์หาความรู้ เพื่อการวิเคราะห์หาผลลัพธ์และประสิทธิผลทางสุขภาพ รวมไปถึงการวิเคราะห์ทางระบาดวิทยา</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+  </div>
+
+    <div class="uk-section-default">
+        <div class="uk-section uk-light uk-background-cover" style="background-image: url( "{% static "sky.jpeg" %}" )">
+            <div class="uk-container">
+              <div style="text-align:center">
+                <h3>จุดเด่นของหลักสูตร</h3>
+              </div>
+                <hr class="uk-divider-icon">
+                <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                    <div>
+                        <p>เป็นการเรียนการสอนแบบโมดูล คือ เนื้อหาภายในของแต่ละ Module มีความสมบูรณ์ในตัวเอง (inclusive) โดยไม่จำเป็นต้องผ่านการเรียนมาจากโมดูล อื่นมาก่อน</p>
+                    </div>
+                    <div>
+                        <p>เนื้อหาในแต่ละโมดูลจะสอนให้ผู้เรียนมีความรู้และทักษะในทุกมิติของโมดูลนั้น ซึ่งในทุกโมดูลจะมีรายวิชาโครงงาน (Capstone Project) ที่สอนให้ผู้เรียนได้ลงมือปฏิบัติจริง เพื่อเปิดโอกาสให้ผู้เรียนสามารถที่จะบูรณาการความรู้ในแต่ละรายวิชาของ Module นั้น ๆ เพื่อนำมาแก้ไขปัญหาที่ตนเองสนใจ หรือตามความต้องการของอุตสาหกรรม</p>
+                    </div>
+                    <div>
+                        <p>หลักสูตรยังมีวิชาสหกิจศึกษา ในปีการศึกษาสุดท้าย โดยให้ผู้เรียนได้เข้าไปฝึกงานในหน่วยงานที่เป็นพันธมิตรกับหลักสูตร อาทิเช่น กลุ่มบริษัทในสมาคมประกันวินาศภัย และ กรมบังคับคดีพิเศษ (DSI)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="work" class="uk-margin uk-card uk-card-default uk-card-body">
+      <div class="uk-container" style="text-align:center;">
+        <p>ผู้ที่ผ่านการศึกษาจะมีความสามารถในการเข้าใจโครงสร้างข้อมูล และระเบียนการวิเคราะห์ข้อมูล มีความสามารถในการประกอบอาชีพที่เกี่ยวข้อกับการจัดการและประมวลผลข้อมูล </p>
+        <hr class="uk-divider-icon"><br>
+      <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-text-center" uk-grid-parallax="translate:200" uk-scrollspy="cls:uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#8dc1b4;"><a href="#modal-example" uk-toggle style="color:white;">นักวิทยาศาสตร์ข้อมูล</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#dd4947;"><a href="#modal-example" uk-toggle style="color:white;">นักวิเคราะห์ข้อมูล</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#F0E68C;"><a href="#modal-example" uk-toggle style="color:white;">วิศวกรข้อมูล</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#8dc1b4;"><a href="#modal-example" uk-toggle style="color:white;">โปรแกรมเมอร์</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#dd4947;"><a href="#modal-example" uk-toggle style="color:white;">นักวิเคราะห์สถิติ</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#F0E68C;"><a href="#modal-example" uk-toggle style="color:white;">ผู้เชี่ยวชาญข้อมูลเชิงธุรกิจ</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#8dc1b4;"><a href="#modal-example" uk-toggle style="color:white;">เจ้าหน้าที่ดูแลระบบข้อมูล</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#dd4947;"><a href="#modal-example" uk-toggle style="color:white;">นักออกแบบสถาปัตยกรรมข้อมูล</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#F0E68C;"><a href="#modal-example" uk-toggle style="color:white;">นักวิเคราะห์สำหรับอุตสาหกรรมประกันภัย</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#8dc1b4;"><a href="#modal-example" uk-toggle style="color:white;">เจ้าหน้าที่นิติวิทยาศาสตร์คอมพิวเตอร์</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#dd4947;"><a href="#modal-example" uk-toggle style="color:white;">นักวิเคราะห์ข้อมูลสำหรับองค์กรบริหาร</a></div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body" style="background-color:#F0E68C;"><a href="#modal-example" uk-toggle style="color:white;">นักวิเคราะห์ข้อมูลสำหรับองค์กรสาธารณสุข</a></div>
+          </div>
+      </div>
+      </div>
+      <hr>
+    </div>
+    <div id="modal-example" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title">ชื่ออาชีพ</h2>
+            <p>รายละเอียดอาชีพ บลาๆ</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            </p>
+        </div>
+    </div>
+
+    <div id="register" class="uk-margin uk-card uk-card-default uk-card-body">
+      <div class="uk-container" style="text-align:center;">
+        <p>วิธีการลงทะเบียน ละไว้ก่อน</p>
+        <hr><br>
+      </div>
+      <div class="uk-container" style="text-align:center;">
+        <p>ค่าใช้จ่าย<br>
+          ปริญญาตรี เทอมละ 36,850 <br>ตลอดหลักสูตร 294,800 บาท<br>
+          บุคคลทั่วไป โมดลูละ 20,000บาท
+        </p>
+        <hr><br>
+      </div>
+    </div>
+
+
+
+    <div id="contact" class="uk-position-relative" style="background-color:#bb0404;">
+      <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div>
+            </div>
+            <div style="color:white;"><br>
+              <span class=".uk-text-lead">ติดต่อสอบถาม</span>
+              <p>คณะวิทยาศาสตร์และเทคโนโลยี
+                  <br>
+                  <i class="fa fa-home"></i> ที่อยู่ : 99 ม.18 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 12121
+                  <br>
+                  <i class="fa fa-phone"></i> โทรศัพท์ : 02-765-4321
+                  <br>
+                  <i class="fa fa-envelope"></i> อีเมล์ :
+              </p><br>
+            </div>
+      </div>
+    </div>
+</html>
